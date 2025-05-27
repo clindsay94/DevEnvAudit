@@ -1,0 +1,12 @@
+# This file lists the Python package dependencies for the DevEnvAudit project.
+
+# For parsing and comparing software versions (used in package_manager_integrator.py)
+packaging
+
+# Note for users:
+# tkinter is part of the Python standard library.
+# - On Windows, it is typically included with the Python installation.
+# - On Linux, if tkinter is not installed by default with your Python,
+#   you might need to install it using your system's package manager,
+#   e.g., sudo apt-get install python3-tk or sudo yum install python3-tkinter.
+# It is not installed via pip.

@@ -1,0 +1,5 @@
+--- FILENAME: tests/test_requirements.txt ---
+# For running tests, especially for version comparison in package_manager_integrator
+# This library is also optionally used by the main package_manager_integrator.py
+packaging
+--- END OF tests/test_requirements.txt ---

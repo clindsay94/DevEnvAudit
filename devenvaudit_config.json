@@ -1,1 +1,53 @@
-{}
+{
+  "scan_paths": {
+    "custom_paths": [],
+    "include_system_common_paths": true,
+    "include_user_common_paths": true
+  },
+  "scan_patterns": {
+    "exclude_directories": [
+      "*/node_modules/*",
+      "*/.git/*",
+      "*/__pycache__/*",
+      "*/.venv/*",
+      "*/venv/*",
+      "*/env/*",
+      "*/.env/*",
+      "*/build/*",
+      "*/dist/*",
+      "*/*.egg-info/*"
+    ],
+    "exclude_files": [
+      "*.log",
+      "*.tmp",
+      "*.pyc",
+      "*.pyo",
+      "*.swp"
+    ],
+    "include_files": []
+  },
+  "ignored_tools_identifiers": [],
+  "package_manager_preferences": {
+    "Windows": [
+      "winget",
+      "choco",
+      "scoop"
+    ],
+    "Linux": [
+      "apt",
+      "dnf",
+      "yum",
+      "pacman",
+      "snap",
+      "flatpak"
+    ],
+    "Darwin": [
+      "brew"
+    ]
+  },
+  "scan_options": {
+    "check_updates_via_package_managers": true,
+    "parse_shell_configs": true,
+    "max_recursion_depth": 10
+  }
+}
