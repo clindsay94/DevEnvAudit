@@ -218,12 +218,20 @@ def parse_version_from_output(output, pm_id, package_name_in_pm):
         for line in lines:
             if "Id" in line and "Version" in line: # Header
                 header_found = True
-                parts = [p.strip() for p in re.split(r'\s{2,}', line)] # Split by 2+ spaces
+                header_parts = [p.strip() for p in re.split(r'\s{2,}', line)] # Split by 2+ spaces
                 try:
-                    id_col = parts.index("Id")
-                    version_col = parts.index("Version")
-                except ValueError:
-                    logger.warning(f"Could not find Id/Version columns in winget output: {line}")
+                    id_col = header_parts.index("Id")
+                    # Find the index of the part that starts with "Version"
+                    version_col = -1
+                    for i, part in enumerate(header_parts):
+                        if part.startswith("Version"):
+                            version_col = i
+                            break
+                    if version_col == -1: # Check if Version column was found
+                        logger.warning(f"Could not find 'Version' column in winget output header: {line}")
+                        return None
+                except ValueError: # For id_col = header_parts.index("Id")
+                    logger.warning(f"Could not find 'Id' column in winget output header: {line}")
                     return None
                 continue
 
@@ -252,8 +260,11 @@ def parse_version_from_output(output, pm_id, package_name_in_pm):
     elif pm_id == "brew": # brew info <formula>
                           # Output: <formula>: stable <version>, HEAD
         match = re.search(rf"{re.escape(package_name_in_pm)}: stable\s+([0-9a-zA-Z\.\-]+)", output)
-        if not match: # Sometimes it's just <formula> <version>
-             match = re.search(rf"^{re.escape(package_name_in_pm)}\s+([0-9]+\.[0-9]+(?:[\.\_][0-9a-zA-Z]+)*)", output, re.MULTILINE) # e.g., python@3.11: 3.11.4
+        if not match: # Sometimes it's just <formula>: <version> or <formula> <version>
+             # Try format "package_name: version" first
+             match = re.search(rf"^{re.escape(package_name_in_pm)}:\s+([0-9]+\.[0-9]+(?:[\.\_][0-9a-zA-Z]+)*)", output, re.MULTILINE)
+        if not match: # Then try format "package_name version"
+             match = re.search(rf"^{re.escape(package_name_in_pm)}\s+([0-9]+\.[0-9]+(?:[\.\_][0-9a-zA-Z]+)*)", output, re.MULTILINE)
         if match:
             version = match.group(1)
 

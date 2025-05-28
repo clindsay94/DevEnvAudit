@@ -495,10 +495,10 @@ class EnvironmentScanner:
                     for dup_path in duplicates:
                         var_issues.append(ScanIssue(f"PATH entry '{dup_path}' is duplicated.", "Warning", category="PATH", related_path=dup_path))
 
-            elif name.upper() in [v.upper() for v in key_vars_to_analyze if "_HOME" in v or "_ROOT" in v]:
+            elif name.upper().endswith("_HOME") or name.upper().endswith("_ROOT"):
                 if value and not os.path.exists(value):
                     var_issues.append(ScanIssue(f"Path '{value}' for '{name}' does not exist.", "Critical", category="Environment Variable", related_path=value))
-                elif value and not os.path.isdir(value):
+                elif value and os.path.exists(value) and not os.path.isdir(value): # Check isdir only if path exists and has a value
                      var_issues.append(ScanIssue(f"Path '{value}' for '{name}' is not a directory.", "Warning", category="Environment Variable", related_path=value))
 
             env_var_info = EnvironmentVariableInfo(name, display_value, issues=var_issues) # scope defaults to active_session
