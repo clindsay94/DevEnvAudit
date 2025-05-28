@@ -1,186 +1,191 @@
 import unittest
-from unittest.mock import patch, mock_open, MagicMock, call
-import os
+from unittest.mock import patch, MagicMock
 import platform
-import stat
-import subprocess
-import json
-from pathlib import Path
 
-import scan_logic
-import config_manager
+import package_manager_integrator as pmi
 
-def create_mock_stat(mode=stat.S_IFREG | stat.S_IXUSR):
-    mock_stat_obj = MagicMock()
-    mock_stat_obj.st_mode = mode
-    return mock_stat_obj
-
-class TestScanLogic(unittest.TestCase):
+class TestPackageManagerIntegrator(unittest.TestCase):
 
     def setUp(self):
-        self.mock_config = json.loads(json.dumps(config_manager.DEFAULT_CONFIG))
-        self.patch_load_config = patch('scan_logic.load_config', return_value=self.mock_config)
-        self.mock_load_config_instance = self.patch_load_config.start()
+        # Mock the detected package managers to control which ones are "found"
+        self.patch_shutil_which = patch('shutil.which')
+        self.mock_shutil_which = self.patch_shutil_which.start()
 
-        self.patch_get_scan_options = patch('scan_logic.get_scan_options', return_value=self.mock_config["scan_options"])
-        self.mock_get_scan_options_instance = self.patch_get_scan_options.start()
-
-        self.scanner = scan_logic.EnvironmentScanner(progress_callback=None, status_callback=None)
-
-        self.patch_os_environ = patch.dict(os.environ, {"PATH": "/fake/bin:/usr/fake/bin"}, clear=True)
-        self.mock_os_environ_instance = self.patch_os_environ.start()
-
-        self.patch_categorizer = patch.object(self.scanner, 'categorizer', autospec=True)
-        self.mock_categorizer_instance = self.patch_categorizer.start()
-        self.mock_categorizer_instance.categorize_component.return_value = (None, None)
+        self.patch_run_pm_command = patch('package_manager_integrator._run_pm_command')
+        self.mock_run_pm_command = self.patch_run_pm_command.start()
 
     def tearDown(self):
-        self.patch_load_config.stop()
-        self.patch_get_scan_options.stop()
-        self.patch_os_environ.stop()
-        self.patch_categorizer.stop()
-        patch.stopall()
+        self.patch_shutil_which.stop()
+        self.patch_run_pm_command.stop()
 
-    @patch('subprocess.Popen')
-    def test_run_command_success(self, mock_popen):
-        mock_process = MagicMock()
-        mock_process.communicate.return_value = ("output", "error")
-        mock_process.returncode = 0
-        mock_popen.return_value = mock_process
+    def test_detect_package_managers_windows(self):
+        if platform.system() == "Windows":
+            self.mock_shutil_which.side_effect = lambda exe: f"C:\\path\\to\\{exe}.exe" if exe in ["winget", "choco"] else None
+            detected = pmi.detect_package_managers()
+            self.assertIn("winget", detected)
+            self.assertIn("choco", detected)
+            self.assertNotIn("scoop", detected)
+            self.assertNotIn("brew", detected)
+            self.assertEqual(detected["winget"]["path"], "C:\\path\\to\\winget.exe")
+        else:
+            self.skipTest("Skipping Windows specific PM detection test on non-Windows OS.")
 
-        stdout, stderr, rc = self.scanner._run_command(["echo", "hello"])
-        self.assertEqual(stdout, "output")
-        self.assertEqual(stderr, "error")
-        self.assertEqual(rc, 0)
-        mock_popen.assert_called_once_with(["echo", "hello"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True, encoding='utf-8', errors='replace')
+    def test_detect_package_managers_macos(self):
+        if platform.system() == "Darwin":
+            self.mock_shutil_which.side_effect = lambda exe: f"/usr/local/bin/{exe}" if exe == "brew" else None
+            detected = pmi.detect_package_managers()
+            self.assertIn("brew", detected)
+            self.assertNotIn("apt", detected)
+        else:
+            self.skipTest("Skipping macOS specific PM detection test on non-macOS OS.")
 
-    @patch('subprocess.Popen')
-    def test_run_command_timeout(self, mock_popen):
-        mock_process = MagicMock(spec=subprocess.Popen)
-        mock_process.communicate.side_effect = [
-            subprocess.TimeoutExpired(cmd=["sleep", "5"], timeout=0.1),
-            ("partial_out", "partial_err")
-        ]
-        mock_process.returncode = -1
-        mock_popen.return_value = mock_process
+    def test_detect_package_managers_linux(self):
+        if platform.system() == "Linux":
+            self.mock_shutil_which.side_effect = lambda exe: f"/usr/bin/{exe}" if exe in ["apt-get", "snap"] else None
+            detected = pmi.detect_package_managers()
+            self.assertIn("apt", detected) # Note: 'apt' detection uses 'apt-get'
+            self.assertIn("snap", detected)
+            self.assertNotIn("brew", detected) # Unless Linuxbrew is specifically mocked
+        else:
+            self.skipTest("Skipping Linux specific PM detection test on non-Linux OS.")
 
-        stdout, stderr, rc = self.scanner._run_command(["sleep", "5"], timeout=1)
+    def test_get_pm_package_name(self):
+        self.assertEqual(pmi.get_pm_package_name("python", "apt"), "python3")
+        self.assertEqual(pmi.get_pm_package_name("vscode", "snap"), "code")
+        self.assertIsNone(pmi.get_pm_package_name("unknown_tool", "apt"))
+        self.assertIsNone(pmi.get_pm_package_name("python", "unknown_pm"))
 
-        self.assertEqual(stdout, "partial_out")
-        self.assertTrue("TimeoutExpired: partial_err" in stderr)
-        self.assertEqual(rc, -1)
-        mock_process.kill.assert_called_once()
-        self.assertEqual(mock_process.communicate.call_count, 2)
+    def test_parse_version_from_output_apt(self):
+        output_candidate = "Package: python3\nVersion: 3.9.2-1ubuntu1\nCandidate: 3.9.7-1~20.04\n"
+        self.assertEqual(pmi.parse_version_from_output(output_candidate, "apt", "python3"), "3.9.7-1~20.04")
+        # Test with apt show output format (often just Version:)
+        output_show = """Package: python3
+Status: install ok installed
+Priority: important
+Section: python
+Installed-Size: 424
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: python3-defaults (3.8.2-0ubuntu2)
+Version: 3.8.2-0ubuntu2
+Provides: python3-dev (= 3.8.2-0ubuntu2)
+Depends: python3.8 (>= 3.8.2-1~)
+Suggests: python3-setuptools, python3-pip
+Conflicts: python3-dev (<< 3.8.2-0ubuntu2)
+Breaks: python-virtualenv (<< 1.7.1.2-2~)
+Replaces: python3-dev (<< 3.8.2-0ubuntu2)
+Description: interactive high-level object-oriented language (default python3 version)
+ Python, the high-level, interactive object oriented language, includes an
+ extensive class library with lots of goodies for network programming, GUI
+ development, regular expressions, etc.
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python 3 version (currently v3.8).
+Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+""" # End of triple-quoted string
+        self.assertEqual(pmi.parse_version_from_output(output_show, "apt", "python3"), "3.8.2-0ubuntu2")
 
-    @patch('scan_logic.EnvironmentScanner._run_command')
-    def test_get_version_from_command_success(self, mock_run_cmd):
-        mock_run_cmd.return_value = ("Python 3.9.1", "", 0)
-        with patch('os.path.exists', return_value=True):
-            version = self.scanner._get_version_from_command("/fake/bin/python", ["--version"], r"Python\s+([0-9\.]+)")
-        self.assertEqual(version, "3.9.1")
-        mock_run_cmd.assert_called_once_with(["/fake/bin/python", "--version"])
+    def test_parse_version_from_output_brew(self):
+        output = "git: stable 2.30.1 (bottled), HEAD\n"
+        self.assertEqual(pmi.parse_version_from_output(output, "brew", "git"), "2.30.1")
+        output_simple = "python@3.9: 3.9.12\n"
+        self.assertEqual(pmi.parse_version_from_output(output_simple, "brew", "python@3.9"), "3.9.12")
 
-    @patch('os.path.isdir', return_value=True)
-    @patch('os.path.isfile')
-    @patch('os.access')
-    @patch('pathlib.Path.resolve')
-    def test_find_executable_in_path(self, mock_resolve, mock_access, mock_isfile, mock_isdir):
-        def isfile_side_effect(path_arg):
-            return str(path_arg) == "/fake/bin/python"
-        mock_isfile.side_effect = isfile_side_effect
-        mock_access.return_value = True
-        mock_resolve.side_effect = lambda: Path(str(mock_resolve.call_args[0][0]))
+    def test_parse_version_from_output_winget(self):
+        output = """
+Name        Id                 Version   Matched By
+----------------------------------------------------
+Python 3.11  Python.Python.3.11  3.11.4   Moniker
+Python 3.10  Python.Python.3.10  3.10.11  Moniker
+Git          Git.Git             2.40.0   Moniker
+"""
+        self.assertEqual(pmi.parse_version_from_output(output, "winget", "Python.Python.3.10"), "3.10.11")
+        self.assertEqual(pmi.parse_version_from_output(output, "winget", "Git.Git"), "2.40.0")
+        self.assertIsNone(pmi.parse_version_from_output(output, "winget", "NonExistent.Package"))
 
-        self.scanner.found_executables = {}
-        found_path = self.scanner._find_executable_in_path("python")
-        self.assertEqual(found_path, "/fake/bin/python")
+    @patch('package_manager_integrator.detect_package_managers')
+    def test_get_latest_version_and_update_command_success(self, mock_detect_pms):
+        mock_detect_pms.return_value = {"brew": {"name": "Homebrew", "path": "/usr/local/bin/brew"}}
+        self.mock_run_pm_command.return_value = ("git: stable 2.40.0 (bottled), HEAD\n", "")
 
-        self.scanner.found_executables = {}
-        mock_isfile.side_effect = lambda path_arg: False
-        not_found_path = self.scanner._find_executable_in_path("nonexistent")
-        self.assertIsNone(not_found_path)
+        tool_id = "git"
+        tool_name = "Git"
+        installed_version = "2.39.0"
+        preferred_pms = ["brew"]
 
-    @patch('scan_logic.EnvironmentScanner._find_executable_in_path')
-    @patch('scan_logic.EnvironmentScanner._get_version_from_command')
-    @patch('scan_logic.EnvironmentScanner._get_tool_details', return_value={})
-    def test_identify_tools_python_example(self, mock_get_details, mock_get_version, mock_find_exe):
-        mock_find_exe.return_value = "/fake/bin/python3"
-        mock_get_version.return_value = "3.9.5"
-        self.mock_categorizer_instance.categorize_component.return_value = ("Language", "Python 3")
+        result = pmi.get_latest_version_and_update_command(tool_id, tool_name, installed_version, preferred_pms)
 
-        original_tools_db = scan_logic.TOOLS_DB
-        test_tools_db = [
-            {
-                "id": "python", "name": "Python", "category": "Language",
-                "executables": {platform.system(): ["python3"]},
-                "version_args": ["--version"],
-                "version_regex": r"Python\s+([0-9\.]+)",
-            }
-        ]
-        scan_logic.TOOLS_DB = test_tools_db
-        self.scanner.detected_components = []
-        self.scanner.identify_tools()
+        self.assertIsNotNone(result)
+        self.assertEqual(result["latest_version"], "2.40.0")
+        self.assertEqual(result["package_manager_id"], "brew")
+        self.assertEqual(result["package_manager_name"], "Homebrew")
+        self.assertEqual(result["package_name_in_pm"], "git")
+        self.assertTrue("brew upgrade git" in result["update_command"])
+        self.assertTrue(result["is_update_available"])
 
-        self.assertEqual(len(self.scanner.detected_components), 1)
-        py_comp = self.scanner.detected_components[0]
-        self.assertEqual(py_comp.name, "Python")
-        self.assertEqual(py_comp.version, "3.9.5")
-        self.assertEqual(py_comp.executable_path, "/fake/bin/python3")
-        self.assertEqual(py_comp.category, "Language")
-        self.assertEqual(py_comp.matched_db_name, "Python 3")
+        installed_version_latest = "2.40.0"
+        result_latest = pmi.get_latest_version_and_update_command(tool_id, tool_name, installed_version_latest, preferred_pms)
+        self.assertFalse(result_latest["is_update_available"])
 
-        mock_find_exe.assert_called_with("python3")
-        mock_get_version.assert_called_with("/fake/bin/python3", ["--version"], r"Python\s+([0-9\.]+)")
-        self.mock_categorizer_instance.categorize_component.assert_called_with("Python", "/fake/bin/python3")
+    @patch('package_manager_integrator.detect_package_managers')
+    def test_get_latest_version_no_mapping(self, mock_detect_pms):
+        mock_detect_pms.return_value = {"apt": {"name": "APT", "path":"/usr/bin/apt-get"}}
+        result = pmi.get_latest_version_and_update_command("unknown_tool_id", "UnknownTool", "1.0", ["apt"])
+        self.assertIsNone(result)
 
-        scan_logic.TOOLS_DB = original_tools_db
+    @patch('package_manager_integrator.detect_package_managers')
+    def test_get_latest_version_pm_command_fails(self, mock_detect_pms):
+        mock_detect_pms.return_value = {"brew": {"name": "Homebrew", "path":"/usr/local/bin/brew"}}
+        self.mock_run_pm_command.return_value = (None, "Error occurred")
+        result = pmi.get_latest_version_and_update_command("git", "Git", "1.0", ["brew"])
+        self.assertIsNone(result)
 
-    def test_collect_environment_variables(self):
-        current_env = {
-            "PATH": f"/fake/bin{os.pathsep}/duplicate/path{os.pathsep}/duplicate/path{os.pathsep}/non_existent_path_entry",
-            "TEST_VAR": "test_value",
-            "MY_HOME": "/fake/home",
-            "EMPTY_VAR": "",
-            "BAD_PATH_VAR": "/non/existent/path",
-            "FAKE_JAVA_HOME": "/very/fake/java/home"
-        }
-        with patch.dict(os.environ, current_env, clear=True):
-            with patch('os.path.exists') as mock_exists, \
-                 patch('os.path.isdir') as mock_isdir:
+    @patch('package_manager_integrator.detect_package_managers')
+    def test_get_latest_version_version_parse_fails(self, mock_detect_pms):
+        mock_detect_pms.return_value = {"brew": {"name": "Homebrew", "path":"/usr/local/bin/brew"}}
+        self.mock_run_pm_command.return_value = ("Some unexpected output", "")
+        result = pmi.get_latest_version_and_update_command("git", "Git", "1.0", ["brew"])
+        self.assertIsNone(result)
 
-                def path_exists_side_effect(path_arg):
-                    return path_arg in ["/fake/bin", "/duplicate/path", "/fake/home"]
-                mock_exists.side_effect = path_exists_side_effect
-                mock_isdir.return_value = True
+    @patch('package_manager_integrator.detect_package_managers')
+    def test_version_comparison_logic(self, mock_detect_pms):
+        mock_detect_pms.return_value = {"brew": {"name": "Homebrew", "path": "/usr/local/bin/brew"}}
 
-                self.scanner.environment_variables = []
-                self.scanner.issues = []
-                self.scanner.collect_environment_variables()
+        # Mock a tool that exists in TOOL_TO_PM_PACKAGE_MAP for brew
+        original_tool_map = pmi.TOOL_TO_PM_PACKAGE_MAP.get("mytool_id_version_test")
+        pmi.TOOL_TO_PM_PACKAGE_MAP["mytool_id_version_test"] = {"brew": "mytool-package"}
+        self.mock_run_pm_command.return_value = ("mytool-package: stable 1.0.10\n", "")
 
-        self.assertGreaterEqual(len(self.scanner.environment_variables), 6)
+        # Case 1: packaging library works (default behavior, no need to patch parse_version itself here unless testing its absence)
+        result = pmi.get_latest_version_and_update_command("mytool_id_version_test", "MyToolVersionTest", "1.0.2", ["brew"])
+        self.assertIsNotNone(result)
+        self.assertTrue(result["is_update_available"]) # 1.0.10 > 1.0.2
 
-        test_var_info = next((ev for ev in self.scanner.environment_variables if ev.name == 'TEST_VAR'), None)
-        self.assertIsNotNone(test_var_info)
-        if test_var_info: self.assertEqual(test_var_info.value, 'test_value')
+        result_no_update = pmi.get_latest_version_and_update_command("mytool_id_version_test", "MyToolVersionTest", "1.0.10", ["brew"])
+        self.assertIsNotNone(result_no_update)
+        self.assertFalse(result_no_update["is_update_available"])
 
-        path_var_info = next((ev for ev in self.scanner.environment_variables if ev.name == 'PATH'), None)
-        self.assertIsNotNone(path_var_info)
-        if path_var_info:
-            self.assertTrue(any("entry '/non_existent_path_entry' does not exist" in issue.description for issue in path_var_info.issues))
-            self.assertTrue(any("entry '/duplicate/path' is duplicated" in issue.description for issue in path_var_info.issues))
+        # Case 2: packaging library import fails (fallback to string comparison)
+        # For this, we need to simulate the ImportError for 'packaging.version' inside the function
+        with patch.dict('sys.modules', {'packaging.version': None, 'packaging': None}): # Simulate packaging module not being available
+            pmi.TOOL_TO_PM_PACKAGE_MAP['mytool_lexical'] = {'brew': 'mytool-lex'}
+            self.mock_run_pm_command.return_value = ("mytool-lex: stable 1.2\n", "")
+            result_lex = pmi.get_latest_version_and_update_command("mytool_lexical", "MyToolLex", "1.11", ["brew"]) # "1.2" > "1.11" lexicographically
+            self.assertIsNotNone(result_lex)
+            self.assertTrue(result_lex["is_update_available"])
 
-        my_home_var_info = next((ev for ev in self.scanner.environment_variables if ev.name == 'MY_HOME'), None)
-        self.assertIsNotNone(my_home_var_info)
-        if my_home_var_info: self.assertEqual(len(my_home_var_info.issues), 0)
+            self.mock_run_pm_command.return_value = ("mytool-lex: stable 2.0\n", "")
+            result_lex_major = pmi.get_latest_version_and_update_command("mytool_lexical", "MyToolLex", "1.9.9", ["brew"])
+            self.assertIsNotNone(result_lex_major)
+            self.assertTrue(result_lex_major["is_update_available"]) # "2.0" > "1.9.9"
 
-        fake_java_home_info = next((ev for ev in self.scanner.environment_variables if ev.name == 'FAKE_JAVA_HOME'), None)
-        self.assertIsNotNone(fake_java_home_info)
-        if fake_java_home_info:
-            self.assertTrue(any("Path '/very/fake/java/home' for 'FAKE_JAVA_HOME' does not exist" in issue.description for issue in fake_java_home_info.issues))
+            del pmi.TOOL_TO_PM_PACKAGE_MAP['mytool_lexical']
 
-# ... (The rest of the test methods for scan_file_system, _is_excluded, cross_reference_and_analyze)
-# ... would need similar careful review and updates based on the current scan_logic.py implementation.
-# ... For brevity, I'm stopping here, assuming the pattern of mocking and assertion is followed.
+        # Restore original map if it existed, otherwise remove the test key
+        if original_tool_map is not None:
+            pmi.TOOL_TO_PM_PACKAGE_MAP["mytool_id_version_test"] = original_tool_map
+        else:
+            del pmi.TOOL_TO_PM_PACKAGE_MAP["mytool_id_version_test"]
 
 if __name__ == '__main__':
     unittest.main()

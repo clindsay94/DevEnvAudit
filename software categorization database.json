@@ -2,1014 +2,1843 @@
   "Coding Environments & Integrated Development Environments (IDEs)": [
     {
       "name": "Visual Studio",
-      "executables": ["devenv.exe"],
+      "executables": [
+        "devenv.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Visual Studio", "VS2019", "VS2022", "Microsoft.VisualStudio"]
+      "keywords": [
+        "Visual Studio",
+        "VS2019",
+        "VS2022",
+        "Microsoft.VisualStudio"
+      ]
     },
     {
       "name": "Visual Studio Code (VS Code)",
-      "executables": ["Code.exe", "code"],
+      "executables": [
+        "Code.exe",
+        "code"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["VSCode", "Visual Studio Code", "Microsoft VS Code"]
+      "keywords": [
+        "VSCode",
+        "Visual Studio Code",
+        "Microsoft VS Code"
+      ]
     },
     {
       "name": "IntelliJ IDEA",
-      "executables": ["idea64.exe", "idea.exe"],
+      "executables": [
+        "idea64.exe",
+        "idea.exe"
+      ],
       "publisher": "JetBrains s.r.o.",
-      "keywords": ["IntelliJ IDEA", "JetBrains"]
+      "keywords": [
+        "IntelliJ IDEA",
+        "JetBrains"
+      ]
     },
     {
       "name": "PyCharm",
-      "executables": ["pycharm64.exe", "pycharm.exe"],
+      "executables": [
+        "pycharm64.exe",
+        "pycharm.exe"
+      ],
       "publisher": "JetBrains s.r.o.",
-      "keywords": ["PyCharm", "JetBrains"]
+      "keywords": [
+        "PyCharm",
+        "JetBrains"
+      ]
     },
     {
       "name": "WebStorm",
-      "executables": ["webstorm64.exe", "webstorm.exe"],
+      "executables": [
+        "webstorm64.exe",
+        "webstorm.exe"
+      ],
       "publisher": "JetBrains s.r.o.",
-      "keywords": ["WebStorm", "JetBrains"]
+      "keywords": [
+        "WebStorm",
+        "JetBrains"
+      ]
     },
     {
       "name": "Android Studio",
-      "executables": ["studio64.exe", "studio.exe"],
+      "executables": [
+        "studio64.exe",
+        "studio.exe"
+      ],
       "publisher": "Google LLC, JetBrains s.r.o.",
-      "keywords": ["Android Studio"]
+      "keywords": [
+        "Android Studio"
+      ]
     },
     {
       "name": "Eclipse",
-      "executables": ["eclipse.exe"],
+      "executables": [
+        "eclipse.exe"
+      ],
       "publisher": "Eclipse Foundation",
-      "keywords": ["Eclipse"]
+      "keywords": [
+        "Eclipse"
+      ]
     },
     {
       "name": "NetBeans",
-      "executables": ["netbeans64.exe", "netbeans.exe"],
+      "executables": [
+        "netbeans64.exe",
+        "netbeans.exe"
+      ],
       "publisher": "Apache Software Foundation, Oracle",
-      "keywords": ["NetBeans"]
+      "keywords": [
+        "NetBeans"
+      ]
     },
     {
       "name": "Xcode (macOS only)",
-      "executables": ["Xcode.app"],
+      "executables": [
+        "Xcode.app"
+      ],
       "publisher": "Apple Inc.",
-      "keywords": ["Xcode"]
+      "keywords": [
+        "Xcode"
+      ]
     },
     {
       "name": "Rider",
-      "executables": ["rider64.exe", "rider.exe"],
+      "executables": [
+        "rider64.exe",
+        "rider.exe"
+      ],
       "publisher": "JetBrains s.r.o.",
-      "keywords": ["Rider", "JetBrains"]
+      "keywords": [
+        "Rider",
+        "JetBrains"
+      ]
     },
     {
       "name": "GoLand",
-      "executables": ["goland64.exe", "goland.exe"],
+      "executables": [
+        "goland64.exe",
+        "goland.exe"
+      ],
       "publisher": "JetBrains s.r.o.",
-      "keywords": ["GoLand", "JetBrains"]
+      "keywords": [
+        "GoLand",
+        "JetBrains"
+      ]
     },
     {
       "name": "CLion",
-      "executables": ["clion64.exe", "clion.exe"],
+      "executables": [
+        "clion64.exe",
+        "clion.exe"
+      ],
       "publisher": "JetBrains s.r.o.",
-      "keywords": ["CLion", "JetBrains"]
+      "keywords": [
+        "CLion",
+        "JetBrains"
+      ]
     },
     {
       "name": "MATLAB",
-      "executables": ["matlab.exe"],
+      "executables": [
+        "matlab.exe"
+      ],
       "publisher": "MathWorks",
-      "keywords": ["MATLAB"]
+      "keywords": [
+        "MATLAB"
+      ]
     },
     {
       "name": "RStudio",
-      "executables": ["rstudio.exe"],
+      "executables": [
+        "rstudio.exe"
+      ],
       "publisher": "Posit Software, PBC",
-      "keywords": ["RStudio"]
+      "keywords": [
+        "RStudio"
+      ]
     },
     {
       "name": "Visual Studio Build Tools",
-      "executables": ["MSBuild.exe", "cl.exe"],
+      "executables": [
+        "MSBuild.exe",
+        "cl.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Visual Studio Build Tools"]
+      "keywords": [
+        "Visual Studio Build Tools"
+      ]
     }
   ],
   "Text Editors (Popular for Coding)": [
     {
       "name": "Sublime Text",
-      "executables": ["sublime_text.exe"],
+      "executables": [
+        "sublime_text.exe"
+      ],
       "publisher": "Sublime HQ Pty Ltd",
-      "keywords": ["Sublime Text"]
+      "keywords": [
+        "Sublime Text"
+      ]
     },
     {
       "name": "Notepad++",
-      "executables": ["notepad++.exe"],
+      "executables": [
+        "notepad++.exe"
+      ],
       "publisher": "Notepad++ Team",
-      "keywords": ["Notepad++"]
+      "keywords": [
+        "Notepad++"
+      ]
     },
     {
       "name": "Atom",
-      "executables": ["atom.exe"],
+      "executables": [
+        "atom.exe"
+      ],
       "publisher": "GitHub (Microsoft)",
-      "keywords": ["Atom"]
+      "keywords": [
+        "Atom"
+      ]
     },
     {
       "name": "Vim / gVim",
-      "executables": ["vim.exe", "gvim.exe"],
+      "executables": [
+        "vim.exe",
+        "gvim.exe"
+      ],
       "publisher": "Bram Moolenaar & others",
-      "keywords": ["Vim", "gVim"]
+      "keywords": [
+        "Vim",
+        "gVim"
+      ]
     },
     {
       "name": "Emacs / GNU Emacs",
-      "executables": ["emacs.exe", "runemacs.exe"],
+      "executables": [
+        "emacs.exe",
+        "runemacs.exe"
+      ],
       "publisher": "GNU Project",
-      "keywords": ["Emacs"]
+      "keywords": [
+        "Emacs"
+      ]
     },
     {
       "name": "Brackets",
-      "executables": ["Brackets.exe"],
+      "executables": [
+        "Brackets.exe"
+      ],
       "publisher": "Brackets Community",
-      "keywords": ["Brackets"]
+      "keywords": [
+        "Brackets"
+      ]
     }
   ],
   "Version Control Systems (VCS)": [
     {
       "name": "Git",
-      "executables": ["git.exe", "git-cmd.exe"],
+      "executables": [
+        "git.exe",
+        "git-cmd.exe"
+      ],
       "publisher": "The Git Development Community",
-      "keywords": ["Git"]
+      "keywords": [
+        "Git"
+      ]
     },
     {
       "name": "GitHub Desktop",
-      "executables": ["GitHubDesktop.exe"],
+      "executables": [
+        "GitHubDesktop.exe"
+      ],
       "publisher": "GitHub, Inc. (Microsoft)",
-      "keywords": ["GitHub Desktop"]
+      "keywords": [
+        "GitHub Desktop"
+      ]
     },
     {
       "name": "Sourcetree",
-      "executables": ["SourceTree.exe"],
+      "executables": [
+        "SourceTree.exe"
+      ],
       "publisher": "Atlassian",
-      "keywords": ["Sourcetree"]
+      "keywords": [
+        "Sourcetree"
+      ]
     },
     {
       "name": "TortoiseGit",
-      "executables": ["TortoiseGitProc.exe"],
+      "executables": [
+        "TortoiseGitProc.exe"
+      ],
       "publisher": "TortoiseGit",
-      "keywords": ["TortoiseGit"]
+      "keywords": [
+        "TortoiseGit"
+      ]
     },
     {
       "name": "TortoiseSVN",
-      "executables": ["TortoiseProc.exe"],
+      "executables": [
+        "TortoiseProc.exe"
+      ],
       "publisher": "TortoiseSVN",
-      "keywords": ["TortoiseSVN"]
+      "keywords": [
+        "TortoiseSVN"
+      ]
     }
   ],
   "Compilers, Interpreters, Runtimes & SDKs": [
     {
       "name": "Python",
-      "executables": ["python.exe", "pythonw.exe", "python3"],
+      "executables": [
+        "python.exe",
+        "pythonw.exe",
+        "python3"
+      ],
       "publisher": "Python Software Foundation",
-      "keywords": ["Python", "CPython", "python3"]
+      "keywords": [
+        "Python",
+        "CPython",
+        "python3"
+      ]
     },
     {
       "name": "Node.js",
-      "executables": ["node.exe", "npm.cmd", "npx.cmd"],
+      "executables": [
+        "node.exe",
+        "npm.cmd",
+        "npx.cmd"
+      ],
       "publisher": "OpenJS Foundation",
-      "keywords": ["Node.js", "NodeJS", "npm", "npx"]
+      "keywords": [
+        "Node.js",
+        "NodeJS",
+        "npm",
+        "npx"
+      ]
     },
     {
       "name": "Java Development Kit (JDK)",
-      "executables": ["javac.exe", "java.exe"],
+      "executables": [
+        "javac.exe",
+        "java.exe"
+      ],
       "publisher": "Oracle Corporation, AdoptOpenJDK, Amazon, etc.",
-      "keywords": ["JDK", "Java SE Development Kit", "OpenJDK"]
+      "keywords": [
+        "JDK",
+        "Java SE Development Kit",
+        "OpenJDK"
+      ]
     },
     {
       "name": "Java Runtime Environment (JRE)",
-      "executables": ["java.exe", "javaw.exe"],
+      "executables": [
+        "java.exe",
+        "javaw.exe"
+      ],
       "publisher": "Oracle Corporation, AdoptOpenJDK, Amazon, etc.",
-      "keywords": ["JRE", "Java SE Runtime Environment"]
+      "keywords": [
+        "JRE",
+        "Java SE Runtime Environment"
+      ]
     },
     {
       "name": "Go Programming Language",
-      "executables": ["go.exe"],
+      "executables": [
+        "go.exe"
+      ],
       "publisher": "The Go Authors (Google)",
-      "keywords": ["Go Programming Language", "golang"]
+      "keywords": [
+        "Go Programming Language",
+        "golang"
+      ]
     },
     {
       "name": "Ruby",
-      "executables": ["ruby.exe"],
-      "keywords": ["Ruby"]
+      "executables": [
+        "ruby.exe"
+      ],
+      "keywords": [
+        "Ruby"
+      ]
     },
     {
       "name": "PHP",
-      "executables": ["php.exe"],
-      "keywords": ["PHP"]
+      "executables": [
+        "php.exe"
+      ],
+      "keywords": [
+        "PHP"
+      ]
     },
     {
       "name": "Perl",
-      "executables": ["perl.exe"],
-      "keywords": ["Perl", "Strawberry Perl", "ActivePerl"]
+      "executables": [
+        "perl.exe"
+      ],
+      "keywords": [
+        "Perl",
+        "Strawberry Perl",
+        "ActivePerl"
+      ]
     },
     {
       "name": "PowerShell Core / PowerShell 7+",
-      "executables": ["pwsh.exe"],
+      "executables": [
+        "pwsh.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["PowerShell Core", "pwsh"]
+      "keywords": [
+        "PowerShell Core",
+        "pwsh"
+      ]
     },
     {
       "name": "MinGW/MSYS2",
-      "executables": ["gcc.exe", "g++.exe"],
-      "keywords": ["MinGW", "MSYS2", "GCC"]
+      "executables": [
+        "gcc.exe",
+        "g++.exe"
+      ],
+      "keywords": [
+        "MinGW",
+        "MSYS2",
+        "GCC"
+      ]
     },
     {
       "name": "Microsoft Visual C++ Redistributable",
-      "executables": ["VC_redist.x64.exe", "VC_redist.x86.exe"],
+      "executables": [
+        "VC_redist.x64.exe",
+        "VC_redist.x86.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Microsoft Visual C++ Redistributable", "VC_redist"]
+      "keywords": [
+        "Microsoft Visual C++ Redistributable",
+        "VC_redist"
+      ]
     },
     {
       "name": ".NET SDK/Runtime/Framework",
-      "executables": ["dotnet.exe"],
+      "executables": [
+        "dotnet.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": [".NET SDK", ".NET Runtime", "ASP.NET Core", "Windows Desktop Runtime", "Microsoft .NET Runtime"]
+      "keywords": [
+        ".NET SDK",
+        ".NET Runtime",
+        "ASP.NET Core",
+        "Windows Desktop Runtime",
+        "Microsoft .NET Runtime"
+      ]
     },
     {
       "name": "Tkinter (Python GUI)",
-      "executables": ["_tkinter.pyd"],
+      "executables": [
+        "_tkinter.pyd"
+      ],
       "publisher": "Python Software Foundation (part of stdlib)",
-      "keywords": ["tkinter", "_tkinter"]
+      "keywords": [
+        "tkinter",
+        "_tkinter"
+      ]
     },
     {
       "name": "Google Cloud SDK",
-      "executables": ["gcloud.cmd", "gsutil.cmd", "bq.cmd"],
+      "executables": [
+        "gcloud.cmd",
+        "gsutil.cmd",
+        "bq.cmd"
+      ],
       "publisher": "Google LLC",
-      "keywords": ["Google Cloud SDK", "gcloud"]
+      "keywords": [
+        "Google Cloud SDK",
+        "gcloud"
+      ]
     },
     {
       "name": "Rust",
-      "executables": ["rustc.exe", "cargo.exe"],
-      "keywords": ["Rust", "rustc", "cargo"]
+      "executables": [
+        "rustc.exe",
+        "cargo.exe"
+      ],
+      "keywords": [
+        "Rust",
+        "rustc",
+        "cargo"
+      ]
     },
     {
       "name": "CMake",
-      "executables": ["cmake.exe"],
-      "keywords": ["CMake"]
+      "executables": [
+        "cmake.exe"
+      ],
+      "keywords": [
+        "CMake"
+      ]
     },
     {
       "name": "Maven",
-      "executables": ["mvn.cmd", "mvn"],
-      "keywords": ["Maven", "mvn"]
+      "executables": [
+        "mvn.cmd",
+        "mvn"
+      ],
+      "keywords": [
+        "Maven",
+        "mvn"
+      ]
     },
     {
       "name": "Gradle",
-      "executables": ["gradle.bat", "gradle"],
-      "keywords": ["Gradle"]
+      "executables": [
+        "gradle.bat",
+        "gradle"
+      ],
+      "keywords": [
+        "Gradle"
+      ]
     },
     {
       "name": "Yarn",
-      "executables": ["yarn.cmd", "yarn"],
-      "keywords": ["Yarn"]
+      "executables": [
+        "yarn.cmd",
+        "yarn"
+      ],
+      "keywords": [
+        "Yarn"
+      ]
     }
   ],
   "Database Management Tools": [
     {
       "name": "SQL Server Management Studio (SSMS)",
-      "executables": ["Ssms.exe"],
+      "executables": [
+        "Ssms.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["SSMS", "SQL Server Management Studio"]
+      "keywords": [
+        "SSMS",
+        "SQL Server Management Studio"
+      ]
     },
     {
       "name": "pgAdmin",
-      "executables": ["pgAdmin4.exe"],
+      "executables": [
+        "pgAdmin4.exe"
+      ],
       "publisher": "pgAdmin Development Team",
-      "keywords": ["pgAdmin"]
+      "keywords": [
+        "pgAdmin"
+      ]
     },
     {
       "name": "MySQL Workbench",
-      "executables": ["MySQLWorkbench.exe"],
+      "executables": [
+        "MySQLWorkbench.exe"
+      ],
       "publisher": "Oracle Corporation",
-      "keywords": ["MySQL Workbench"]
+      "keywords": [
+        "MySQL Workbench"
+      ]
     },
     {
       "name": "DBeaver",
-      "executables": ["dbeaver.exe"],
+      "executables": [
+        "dbeaver.exe"
+      ],
       "publisher": "DBeaver Corp",
-      "keywords": ["DBeaver"]
+      "keywords": [
+        "DBeaver"
+      ]
     },
     {
       "name": "Oracle SQL Developer",
-      "executables": ["sqldeveloper.exe"],
+      "executables": [
+        "sqldeveloper.exe"
+      ],
       "publisher": "Oracle Corporation",
-      "keywords": ["Oracle SQL Developer"]
+      "keywords": [
+        "Oracle SQL Developer"
+      ]
     },
     {
       "name": "MongoDB Compass",
-      "executables": ["MongoDBCompass.exe"],
+      "executables": [
+        "MongoDBCompass.exe"
+      ],
       "publisher": "MongoDB, Inc.",
-      "keywords": ["MongoDB Compass"]
+      "keywords": [
+        "MongoDB Compass"
+      ]
     },
     {
       "name": "HeidiSQL",
-      "executables": ["heidisql.exe"],
+      "executables": [
+        "heidisql.exe"
+      ],
       "publisher": "Ansgar Becker & others",
-      "keywords": ["HeidiSQL"]
+      "keywords": [
+        "HeidiSQL"
+      ]
     },
     {
       "name": "Azure Data Studio",
-      "executables": ["azuredatastudio.exe"],
+      "executables": [
+        "azuredatastudio.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Azure Data Studio"]
+      "keywords": [
+        "Azure Data Studio"
+      ]
     }
   ],
   "Virtualization & Containerization": [
     {
       "name": "Docker Desktop",
-      "executables": ["Docker Desktop.exe", "docker.exe"],
+      "executables": [
+        "Docker Desktop.exe",
+        "docker.exe"
+      ],
       "publisher": "Docker Inc.",
-      "keywords": ["Docker Desktop", "Docker"]
+      "keywords": [
+        "Docker Desktop",
+        "Docker"
+      ]
     },
     {
       "name": "VMware Workstation Pro/Player",
-      "executables": ["vmware.exe"],
+      "executables": [
+        "vmware.exe"
+      ],
       "publisher": "VMware, Inc. (Broadcom)",
-      "keywords": ["VMware Workstation", "VMware Player"]
+      "keywords": [
+        "VMware Workstation",
+        "VMware Player"
+      ]
     },
     {
       "name": "Oracle VM VirtualBox",
-      "executables": ["VirtualBox.exe"],
+      "executables": [
+        "VirtualBox.exe"
+      ],
       "publisher": "Oracle Corporation",
-      "keywords": ["VirtualBox", "Oracle VM VirtualBox"]
+      "keywords": [
+        "VirtualBox",
+        "Oracle VM VirtualBox"
+      ]
     },
     {
       "name": "WSL (Windows Subsystem for Linux)",
-      "executables": ["wsl.exe"],
+      "executables": [
+        "wsl.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Windows Subsystem for Linux", "WSL"]
+      "keywords": [
+        "Windows Subsystem for Linux",
+        "WSL"
+      ]
     },
     {
       "name": "Hyper-V",
       "executables": [],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Hyper-V"],
+      "keywords": [
+        "Hyper-V"
+      ],
       "notes": "System Feature"
     }
   ],
   "Package Managers & Software Distribution Platforms": [
     {
       "name": "Winget",
-      "executables": ["winget.exe"],
-      "os": ["Windows"],
-      "keywords": ["winget"]
+      "executables": [
+        "winget.exe"
+      ],
+      "os": [
+        "Windows"
+      ],
+      "keywords": [
+        "winget"
+      ]
     },
     {
       "name": "Chocolatey (choco)",
-      "executables": ["choco.exe"],
-      "os": ["Windows"],
-      "keywords": ["choco", "chocolatey"]
+      "executables": [
+        "choco.exe"
+      ],
+      "os": [
+        "Windows"
+      ],
+      "keywords": [
+        "choco",
+        "chocolatey"
+      ]
     },
     {
       "name": "Chocolatey GUI",
-      "executables": ["ChocolateyGUI.exe"],
-      "os": ["Windows"],
-      "keywords": ["Chocolatey GUI"]
+      "executables": [
+        "ChocolateyGUI.exe"
+      ],
+      "os": [
+        "Windows"
+      ],
+      "keywords": [
+        "Chocolatey GUI"
+      ]
     },
     {
       "name": "Scoop",
-      "executables": ["scoop.exe"],
-      "os": ["Windows"],
-      "keywords": ["scoop"]
+      "executables": [
+        "scoop.exe"
+      ],
+      "os": [
+        "Windows"
+      ],
+      "keywords": [
+        "scoop"
+      ]
     },
     {
       "name": "Homebrew (brew)",
-      "executables": ["brew"],
-      "os": ["macOS", "Linux"],
-      "keywords": ["brew", "homebrew"]
+      "executables": [
+        "brew"
+      ],
+      "os": [
+        "macOS",
+        "Linux"
+      ],
+      "keywords": [
+        "brew",
+        "homebrew"
+      ]
     },
     {
       "name": "apt (Advanced Package Tool)",
-      "executables": ["apt", "apt-get"],
-      "os": ["Debian/Ubuntu Linux"],
-      "keywords": ["apt", "apt-get"]
+      "executables": [
+        "apt",
+        "apt-get"
+      ],
+      "os": [
+        "Debian/Ubuntu Linux"
+      ],
+      "keywords": [
+        "apt",
+        "apt-get"
+      ]
     },
     {
       "name": "dnf (Dandified YUM)",
-      "executables": ["dnf"],
-      "os": ["Fedora/RHEL Linux"],
-      "keywords": ["dnf"]
+      "executables": [
+        "dnf"
+      ],
+      "os": [
+        "Fedora/RHEL Linux"
+      ],
+      "keywords": [
+        "dnf"
+      ]
     },
     {
       "name": "yum (Yellowdog Updater, Modified)",
-      "executables": ["yum"],
-      "os": ["RHEL/CentOS Linux (older)"],
-      "keywords": ["yum"]
+      "executables": [
+        "yum"
+      ],
+      "os": [
+        "RHEL/CentOS Linux (older)"
+      ],
+      "keywords": [
+        "yum"
+      ]
     },
     {
       "name": "pacman",
-      "executables": ["pacman"],
-      "os": ["Arch Linux"],
-      "keywords": ["pacman"]
+      "executables": [
+        "pacman"
+      ],
+      "os": [
+        "Arch Linux"
+      ],
+      "keywords": [
+        "pacman"
+      ]
     },
     {
       "name": "Snap",
-      "executables": ["snap"],
-      "os": ["Linux (various)"],
-      "keywords": ["snap", "snapd"]
+      "executables": [
+        "snap"
+      ],
+      "os": [
+        "Linux (various)"
+      ],
+      "keywords": [
+        "snap",
+        "snapd"
+      ]
     },
     {
       "name": "Flatpak",
-      "executables": ["flatpak"],
-      "os": ["Linux (various)"],
-      "keywords": ["flatpak"]
+      "executables": [
+        "flatpak"
+      ],
+      "os": [
+        "Linux (various)"
+      ],
+      "keywords": [
+        "flatpak"
+      ]
     },
     {
       "name": "Fast Node Manager (fnm)",
-      "executables": ["fnm.exe"],
+      "executables": [
+        "fnm.exe"
+      ],
       "publisher": "Schniz",
-      "keywords": ["fnm"]
+      "keywords": [
+        "fnm"
+      ]
     },
     {
       "name": "zoxide",
-      "executables": ["zoxide.exe"],
+      "executables": [
+        "zoxide.exe"
+      ],
       "publisher": "Ajeet D'Souza",
-      "keywords": ["zoxide"]
+      "keywords": [
+        "zoxide"
+      ]
     }
   ],
   "Web Browsers": [
     {
       "name": "Google Chrome",
-      "executables": ["chrome.exe"],
+      "executables": [
+        "chrome.exe"
+      ],
       "publisher": "Google LLC",
-      "keywords": ["Chrome"]
+      "keywords": [
+        "Chrome"
+      ]
     },
     {
       "name": "Mozilla Firefox",
-      "executables": ["firefox.exe"],
+      "executables": [
+        "firefox.exe"
+      ],
       "publisher": "Mozilla Corporation",
-      "keywords": ["Firefox"]
+      "keywords": [
+        "Firefox"
+      ]
     },
     {
       "name": "Safari",
-      "executables": ["Safari.app"],
+      "executables": [
+        "Safari.app"
+      ],
       "publisher": "Apple Inc.",
-      "os": ["macOS"],
-      "keywords": ["Safari"]
+      "os": [
+        "macOS"
+      ],
+      "keywords": [
+        "Safari"
+      ]
     },
     {
       "name": "Microsoft Edge",
-      "executables": ["msedge.exe"],
+      "executables": [
+        "msedge.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Edge", "msedge"]
+      "keywords": [
+        "Edge",
+        "msedge"
+      ]
     },
     {
       "name": "Brave",
-      "executables": ["brave.exe"],
+      "executables": [
+        "brave.exe"
+      ],
       "publisher": "Brave Software, Inc.",
-      "keywords": ["Brave"]
+      "keywords": [
+        "Brave"
+      ]
     },
     {
       "name": "Opera",
-      "executables": ["opera.exe"],
+      "executables": [
+        "opera.exe"
+      ],
       "publisher": "Opera Software",
-      "keywords": ["Opera"]
+      "keywords": [
+        "Opera"
+      ]
     }
   ],
   "Office & Productivity Suites": [
     {
       "name": "Microsoft Office (Word, Excel, PowerPoint, Outlook, etc.)",
-      "executables": ["WINWORD.EXE", "EXCEL.EXE", "POWERPNT.EXE", "OUTLOOK.EXE"],
+      "executables": [
+        "WINWORD.EXE",
+        "EXCEL.EXE",
+        "POWERPNT.EXE",
+        "OUTLOOK.EXE"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Microsoft Office", "Word", "Excel", "PowerPoint", "Outlook"]
+      "keywords": [
+        "Microsoft Office",
+        "Word",
+        "Excel",
+        "PowerPoint",
+        "Outlook"
+      ]
     },
     {
       "name": "LibreOffice",
-      "executables": ["soffice.exe", "soffice.bin"],
+      "executables": [
+        "soffice.exe",
+        "soffice.bin"
+      ],
       "publisher": "The Document Foundation",
-      "keywords": ["LibreOffice", "soffice"]
+      "keywords": [
+        "LibreOffice",
+        "soffice"
+      ]
     },
     {
       "name": "WPS Office",
-      "executables": ["wps.exe"],
+      "executables": [
+        "wps.exe"
+      ],
       "publisher": "Kingsoft",
-      "keywords": ["WPS Office"]
+      "keywords": [
+        "WPS Office"
+      ]
     },
     {
       "name": "OnlyOffice Desktop Editors",
-      "executables": ["DesktopEditors.exe"],
+      "executables": [
+        "DesktopEditors.exe"
+      ],
       "publisher": "Ascensio System SIA",
-      "keywords": ["OnlyOffice"]
+      "keywords": [
+        "OnlyOffice"
+      ]
     },
     {
       "name": "Microsoft OneDrive",
-      "executables": ["OneDrive.exe"],
+      "executables": [
+        "OneDrive.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["OneDrive"]
+      "keywords": [
+        "OneDrive"
+      ]
     }
   ],
   "Communication Tools": [
     {
       "name": "Zoom",
-      "executables": ["Zoom.exe"],
+      "executables": [
+        "Zoom.exe"
+      ],
       "publisher": "Zoom Video Communications, Inc.",
-      "keywords": ["Zoom"]
+      "keywords": [
+        "Zoom"
+      ]
     },
     {
       "name": "Slack",
-      "executables": ["slack.exe"],
+      "executables": [
+        "slack.exe"
+      ],
       "publisher": "Slack Technologies (Salesforce)",
-      "keywords": ["Slack"]
+      "keywords": [
+        "Slack"
+      ]
     },
     {
       "name": "Discord",
-      "executables": ["Discord.exe"],
+      "executables": [
+        "Discord.exe"
+      ],
       "publisher": "Discord Inc.",
-      "keywords": ["Discord"]
+      "keywords": [
+        "Discord"
+      ]
     },
     {
       "name": "Microsoft Teams",
-      "executables": ["Teams.exe", "ms-teams.exe"],
+      "executables": [
+        "Teams.exe",
+        "ms-teams.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Microsoft Teams", "Teams"]
+      "keywords": [
+        "Microsoft Teams",
+        "Teams"
+      ]
     },
     {
       "name": "Skype",
-      "executables": ["skype.exe"],
+      "executables": [
+        "skype.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["Skype"]
+      "keywords": [
+        "Skype"
+      ]
     },
     {
       "name": "Telegram Desktop",
-      "executables": ["Telegram.exe"],
+      "executables": [
+        "Telegram.exe"
+      ],
       "publisher": "Telegram FZ-LLC",
-      "keywords": ["Telegram"]
+      "keywords": [
+        "Telegram"
+      ]
     },
     {
       "name": "Thunderbird",
-      "executables": ["thunderbird.exe"],
+      "executables": [
+        "thunderbird.exe"
+      ],
       "publisher": "Mozilla Foundation",
-      "keywords": ["Thunderbird"]
+      "keywords": [
+        "Thunderbird"
+      ]
     }
   ],
   "Graphics, Image & 3D Modeling Software": [
     {
       "name": "Adobe Photoshop",
-      "executables": ["Photoshop.exe"],
+      "executables": [
+        "Photoshop.exe"
+      ],
       "publisher": "Adobe Inc.",
-      "keywords": ["Photoshop", "Adobe Photoshop"]
+      "keywords": [
+        "Photoshop",
+        "Adobe Photoshop"
+      ]
     },
     {
       "name": "GIMP",
-      "executables": ["gimp-2.10.exe"],
+      "executables": [
+        "gimp-2.10.exe"
+      ],
       "publisher": "The GIMP Team",
-      "keywords": ["GIMP"]
+      "keywords": [
+        "GIMP"
+      ]
     },
     {
       "name": "Inkscape",
-      "executables": ["inkscape.exe"],
+      "executables": [
+        "inkscape.exe"
+      ],
       "publisher": "Inkscape Project",
-      "keywords": ["Inkscape"]
+      "keywords": [
+        "Inkscape"
+      ]
     },
     {
       "name": "Krita",
-      "executables": ["krita.exe"],
+      "executables": [
+        "krita.exe"
+      ],
       "publisher": "Krita Foundation",
-      "keywords": ["Krita"]
+      "keywords": [
+        "Krita"
+      ]
     },
     {
       "name": "Paint.NET",
-      "executables": ["PaintDotNet.exe"],
+      "executables": [
+        "PaintDotNet.exe"
+      ],
       "publisher": "dotPDN LLC",
-      "keywords": ["Paint.NET"]
+      "keywords": [
+        "Paint.NET"
+      ]
     },
     {
       "name": "Affinity Photo",
-      "executables": ["Photo.exe"],
+      "executables": [
+        "Photo.exe"
+      ],
       "publisher": "Serif (Europe) Ltd.",
-      "keywords": ["Affinity Photo"]
+      "keywords": [
+        "Affinity Photo"
+      ]
     },
     {
       "name": "Blender",
-      "executables": ["blender.exe"],
+      "executables": [
+        "blender.exe"
+      ],
       "publisher": "Blender Foundation",
-      "keywords": ["Blender"]
+      "keywords": [
+        "Blender"
+      ]
     },
     {
       "name": "AutoCAD",
-      "executables": ["acad.exe"],
+      "executables": [
+        "acad.exe"
+      ],
       "publisher": "Autodesk, Inc.",
-      "keywords": ["AutoCAD"]
+      "keywords": [
+        "AutoCAD"
+      ]
     },
     {
       "name": "SketchUp",
-      "executables": ["SketchUp.exe"],
+      "executables": [
+        "SketchUp.exe"
+      ],
       "publisher": "Trimble Inc.",
-      "keywords": ["SketchUp"]
+      "keywords": [
+        "SketchUp"
+      ]
     },
     {
       "name": "FreeCAD",
-      "executables": ["FreeCAD.exe"],
-      "keywords": ["FreeCAD"]
+      "executables": [
+        "FreeCAD.exe"
+      ],
+      "keywords": [
+        "FreeCAD"
+      ]
     },
     {
       "name": "SolidWorks",
-      "executables": ["sldworks.exe"],
+      "executables": [
+        "sldworks.exe"
+      ],
       "publisher": "Dassault Systèmes",
-      "keywords": ["SolidWorks"]
+      "keywords": [
+        "SolidWorks"
+      ]
     }
   ],
   "Audio & Video Editing/Utilities": [
     {
       "name": "Audacity",
-      "executables": ["audacity.exe"],
+      "executables": [
+        "audacity.exe"
+      ],
       "publisher": "Audacity Team",
-      "keywords": ["Audacity"]
+      "keywords": [
+        "Audacity"
+      ]
     },
     {
       "name": "VLC Media Player",
-      "executables": ["vlc.exe"],
+      "executables": [
+        "vlc.exe"
+      ],
       "publisher": "VideoLAN Project",
-      "keywords": ["VLC"]
+      "keywords": [
+        "VLC"
+      ]
     },
     {
       "name": "PotPlayer",
-      "executables": ["PotPlayerMini64.exe", "PotPlayer.exe"],
-      "keywords": ["PotPlayer"]
+      "executables": [
+        "PotPlayerMini64.exe",
+        "PotPlayer.exe"
+      ],
+      "keywords": [
+        "PotPlayer"
+      ]
     },
     {
       "name": "MPC-HC (Media Player Classic - Home Cinema)",
-      "executables": ["mpc-hc64.exe", "mpc-hc.exe"],
-      "keywords": ["MPC-HC", "Media Player Classic"]
+      "executables": [
+        "mpc-hc64.exe",
+        "mpc-hc.exe"
+      ],
+      "keywords": [
+        "MPC-HC",
+        "Media Player Classic"
+      ]
     },
     {
       "name": "IINA (macOS only)",
-      "executables": ["IINA.app"],
-      "os": ["macOS"],
-      "keywords": ["IINA"]
+      "executables": [
+        "IINA.app"
+      ],
+      "os": [
+        "macOS"
+      ],
+      "keywords": [
+        "IINA"
+      ]
     },
     {
       "name": "OBS Studio",
-      "executables": ["obs64.exe", "obs32.exe"],
+      "executables": [
+        "obs64.exe",
+        "obs32.exe"
+      ],
       "publisher": "OBS Project",
-      "keywords": ["OBS Studio"]
+      "keywords": [
+        "OBS Studio"
+      ]
     },
     {
       "name": "HandBrake",
-      "executables": ["HandBrake.exe"],
+      "executables": [
+        "HandBrake.exe"
+      ],
       "publisher": "The HandBrake Team",
-      "keywords": ["HandBrake"]
+      "keywords": [
+        "HandBrake"
+      ]
     },
     {
       "name": "FL Studio",
-      "executables": ["FL64.exe", "FL.exe"],
+      "executables": [
+        "FL64.exe",
+        "FL.exe"
+      ],
       "publisher": "Image-Line",
-      "keywords": ["FL Studio"]
+      "keywords": [
+        "FL Studio"
+      ]
     },
     {
       "name": "Ableton Live",
-      "executables": ["Ableton Live [Version].exe"],
+      "executables": [
+        "Ableton Live [Version].exe"
+      ],
       "publisher": "Ableton AG",
-      "keywords": ["Ableton Live"]
+      "keywords": [
+        "Ableton Live"
+      ]
     },
     {
       "name": "Reaper",
-      "executables": ["reaper.exe"],
+      "executables": [
+        "reaper.exe"
+      ],
       "publisher": "Cockos Incorporated",
-      "keywords": ["Reaper"]
+      "keywords": [
+        "Reaper"
+      ]
     },
     {
       "name": "DaVinci Resolve",
-      "executables": ["Resolve.exe"],
+      "executables": [
+        "Resolve.exe"
+      ],
       "publisher": "Blackmagic Design",
-      "keywords": ["DaVinci Resolve"]
+      "keywords": [
+        "DaVinci Resolve"
+      ]
     },
     {
       "name": "Adobe Premiere Pro",
-      "executables": ["Adobe Premiere Pro.exe"],
+      "executables": [
+        "Adobe Premiere Pro.exe"
+      ],
       "publisher": "Adobe Inc.",
-      "keywords": ["Premiere Pro", "Adobe Premiere"]
+      "keywords": [
+        "Premiere Pro",
+        "Adobe Premiere"
+      ]
     },
     {
       "name": "Shotcut",
-      "executables": ["shotcut.exe"],
+      "executables": [
+        "shotcut.exe"
+      ],
       "publisher": "Meltytech, LLC",
-      "keywords": ["Shotcut"]
+      "keywords": [
+        "Shotcut"
+      ]
     },
     {
       "name": "OpenShot Video Editor",
-      "executables": ["openshot-qt.exe"],
+      "executables": [
+        "openshot-qt.exe"
+      ],
       "publisher": "OpenShot Studios, LLC",
-      "keywords": ["OpenShot"]
+      "keywords": [
+        "OpenShot"
+      ]
     }
   ],
   "File Management & Archivers": [
     {
       "name": "7-Zip",
-      "executables": ["7zFM.exe", "7zG.exe"],
+      "executables": [
+        "7zFM.exe",
+        "7zG.exe"
+      ],
       "publisher": "Igor Pavlov",
-      "keywords": ["7-Zip", "7z"]
+      "keywords": [
+        "7-Zip",
+        "7z"
+      ]
     },
     {
       "name": "WinRAR",
-      "executables": ["WinRAR.exe"],
+      "executables": [
+        "WinRAR.exe"
+      ],
       "publisher": "RARLAB",
-      "keywords": ["WinRAR"]
+      "keywords": [
+        "WinRAR"
+      ]
     },
     {
       "name": "Total Commander",
-      "executables": ["TOTALCMD.EXE", "TOTALCMD64.EXE"],
-      "keywords": ["Total Commander"]
+      "executables": [
+        "TOTALCMD.EXE",
+        "TOTALCMD64.EXE"
+      ],
+      "keywords": [
+        "Total Commander"
+      ]
     },
     {
       "name": "Everything",
-      "executables": ["Everything.exe"],
+      "executables": [
+        "Everything.exe"
+      ],
       "publisher": "voidtools",
-      "keywords": ["Everything Search"]
+      "keywords": [
+        "Everything Search"
+      ]
     },
     {
       "name": "TeraCopy",
-      "executables": ["TeraCopy.exe"],
-      "keywords": ["TeraCopy"]
+      "executables": [
+        "TeraCopy.exe"
+      ],
+      "keywords": [
+        "TeraCopy"
+      ]
     },
     {
       "name": "FreeFileSync",
-      "executables": ["FreeFileSync.exe"],
-      "keywords": ["FreeFileSync"]
+      "executables": [
+        "FreeFileSync.exe"
+      ],
+      "keywords": [
+        "FreeFileSync"
+      ]
     },
     {
       "name": "FileZilla Client",
-      "executables": ["filezilla.exe"],
+      "executables": [
+        "filezilla.exe"
+      ],
       "publisher": "Tim Kosse",
-      "keywords": ["FileZilla"]
+      "keywords": [
+        "FileZilla"
+      ]
     }
   ],
   "System Utilities & PC Monitoring": [
     {
       "name": "AOMEI Partition Assistant",
-      "executables": ["PartitionAssistant.exe", "PAssist.exe"],
+      "executables": [
+        "PartitionAssistant.exe",
+        "PAssist.exe"
+      ],
       "publisher": "AOMEI International Network Limited.",
-      "keywords": ["AOMEI Partition Assistant"]
+      "keywords": [
+        "AOMEI Partition Assistant"
+      ]
     },
     {
       "name": "DroidKit",
-      "executables": ["DroidKit.exe"],
+      "executables": [
+        "DroidKit.exe"
+      ],
       "publisher": "iMobie Inc.",
-      "category_tags": ["Android Utility"],
-      "keywords": ["DroidKit"]
+      "category_tags": [
+        "Android Utility"
+      ],
+      "keywords": [
+        "DroidKit"
+      ]
     },
     {
       "name": "Electric Sheep",
-      "executables": ["electricsheep.scr", "electricsheep.exe"],
-      "category_tags": ["Screensaver", "Art"],
-      "keywords": ["Electric Sheep"]
+      "executables": [
+        "electricsheep.scr",
+        "electricsheep.exe"
+      ],
+      "category_tags": [
+        "Screensaver",
+        "Art"
+      ],
+      "keywords": [
+        "Electric Sheep"
+      ]
     },
     {
       "name": "FAHClient (Folding@home)",
-      "executables": ["FAHClient.exe"],
+      "executables": [
+        "FAHClient.exe"
+      ],
       "publisher": "foldingathome.org",
-      "keywords": ["Folding@home", "FAHClient"]
+      "keywords": [
+        "Folding@home",
+        "FAHClient"
+      ]
     },
     {
       "name": "Google Drive",
-      "executables": ["GoogleDriveFS.exe"],
+      "executables": [
+        "GoogleDriveFS.exe"
+      ],
       "publisher": "Google LLC",
-      "keywords": ["Google Drive"]
+      "keywords": [
+        "Google Drive"
+      ]
     },
     {
       "name": "L-Connect 3",
-      "executables": ["L-Connect3.exe"],
+      "executables": [
+        "L-Connect3.exe"
+      ],
       "publisher": "Lian-Li",
-      "category_tags": ["Fan Control", "RGB Control"],
-      "keywords": ["L-Connect"]
+      "category_tags": [
+        "Fan Control",
+        "RGB Control"
+      ],
+      "keywords": [
+        "L-Connect"
+      ]
     },
     {
       "name": "NVIDIA App / NVIDIA Control Panel / GeForce Experience",
-      "executables": ["nvidia-settings.exe", "nvapp.exe", "nvcplui.exe", "NVIDIA GeForce Experience.exe"],
+      "executables": [
+        "nvidia-settings.exe",
+        "nvapp.exe",
+        "nvcplui.exe",
+        "NVIDIA GeForce Experience.exe"
+      ],
       "publisher": "NVIDIA Corporation",
-      "keywords": ["NVIDIA", "GeForce Experience", "NVIDIA Control Panel"]
+      "keywords": [
+        "NVIDIA",
+        "GeForce Experience",
+        "NVIDIA Control Panel"
+      ]
     },
     {
       "name": "AMD Software: Adrenalin Edition",
-      "executables": ["RadeonSoftware.exe"],
+      "executables": [
+        "RadeonSoftware.exe"
+      ],
       "publisher": "Advanced Micro Devices, Inc.",
-      "keywords": ["AMD Software", "Radeon Software", "Adrenalin"]
+      "keywords": [
+        "AMD Software",
+        "Radeon Software",
+        "Adrenalin"
+      ]
     },
     {
       "name": "Oh My Posh",
-      "executables": ["oh-my-posh.exe"],
-      "category_tags": ["Shell Customization", "Developer Tool"],
-      "keywords": ["Oh My Posh"]
+      "executables": [
+        "oh-my-posh.exe"
+      ],
+      "category_tags": [
+        "Shell Customization",
+        "Developer Tool"
+      ],
+      "keywords": [
+        "Oh My Posh"
+      ]
     },
     {
       "name": "PowerToys",
-      "executables": ["PowerToys.exe"],
+      "executables": [
+        "PowerToys.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["PowerToys"]
+      "keywords": [
+        "PowerToys"
+      ]
     },
     {
       "name": "Process Lasso",
-      "executables": ["ProcessLasso.exe", "ProcessLassoLauncher.exe"],
+      "executables": [
+        "ProcessLasso.exe",
+        "ProcessLassoLauncher.exe"
+      ],
       "publisher": "Bitsum",
-      "keywords": ["Process Lasso"]
+      "keywords": [
+        "Process Lasso"
+      ]
     },
     {
       "name": "Quick Share",
-      "executables": ["QuickShare.exe"],
+      "executables": [
+        "QuickShare.exe"
+      ],
       "publisher": "Google LLC",
-      "category_tags": ["File Sharing"],
-      "keywords": ["Quick Share"]
+      "category_tags": [
+        "File Sharing"
+      ],
+      "keywords": [
+        "Quick Share"
+      ]
     },
     {
       "name": "Registry Repair",
-      "executables": ["RegistryRepair.exe"],
+      "executables": [
+        "RegistryRepair.exe"
+      ],
       "publisher": "Glarysoft Ltd",
-      "keywords": ["Registry Repair"]
+      "keywords": [
+        "Registry Repair"
+      ]
     },
     {
       "name": "RivaTuner Statistics Server (RTSS)",
-      "executables": ["RTSS.exe"],
+      "executables": [
+        "RTSS.exe"
+      ],
       "publisher": "Unwinder/Guru3D",
-      "category_tags": ["GPU Monitoring"],
-      "keywords": ["RTSS", "RivaTuner"]
+      "category_tags": [
+        "GPU Monitoring"
+      ],
+      "keywords": [
+        "RTSS",
+        "RivaTuner"
+      ]
     },
     {
       "name": "SamFw Tool",
-      "executables": ["SamFwTool.exe"],
+      "executables": [
+        "SamFwTool.exe"
+      ],
       "publisher": "SamFw.com",
-      "category_tags": ["Mobile Firmware Utility"],
-      "keywords": ["SamFw Tool"]
+      "category_tags": [
+        "Mobile Firmware Utility"
+      ],
+      "keywords": [
+        "SamFw Tool"
+      ]
     },
     {
       "name": "Samsung Magician",
-      "executables": ["SamsungMagician.exe"],
+      "executables": [
+        "SamsungMagician.exe"
+      ],
       "publisher": "Samsung Electronics",
-      "category_tags": ["SSD Management"],
-      "keywords": ["Samsung Magician"]
+      "category_tags": [
+        "SSD Management"
+      ],
+      "keywords": [
+        "Samsung Magician"
+      ]
     },
     {
       "name": "VG QuickUnlocker",
       "executables": [],
-      "keywords": ["VG QuickUnlocker"]
+      "keywords": [
+        "VG QuickUnlocker"
+      ]
     },
     {
       "name": "XTM ADB Tool",
-      "executables": ["xtm_adb_tool.exe"],
+      "executables": [
+        "xtm_adb_tool.exe"
+      ],
       "publisher": "Gsm_X_Team",
-      "category_tags": ["Android Developer Tool"],
-      "keywords": ["XTM ADB Tool"]
+      "category_tags": [
+        "Android Developer Tool"
+      ],
+      "keywords": [
+        "XTM ADB Tool"
+      ]
     },
     {
       "name": "Yubico Authenticator",
-      "executables": ["yubioath-desktop.exe"],
+      "executables": [
+        "yubioath-desktop.exe"
+      ],
       "publisher": "Yubico AB",
-      "keywords": ["Yubico Authenticator"]
+      "keywords": [
+        "Yubico Authenticator"
+      ]
     },
     {
       "name": "Yubico Login for Windows",
-      "executables": ["YubicoLogin.Tray.exe"],
+      "executables": [
+        "YubicoLogin.Tray.exe"
+      ],
       "publisher": "Yubico AB",
-      "keywords": ["Yubico Login"]
+      "keywords": [
+        "Yubico Login"
+      ]
     },
     {
       "name": "YubiKey Manager",
-      "executables": ["ykman-gui.exe"],
+      "executables": [
+        "ykman-gui.exe"
+      ],
       "publisher": "Yubico AB",
-      "keywords": ["YubiKey Manager"]
+      "keywords": [
+        "YubiKey Manager"
+      ]
     },
     {
       "name": "YubiKey Personalization Tool",
-      "executables": ["ykpers-gui.exe"],
+      "executables": [
+        "ykpers-gui.exe"
+      ],
       "publisher": "Yubico AB",
-      "keywords": ["YubiKey Personalization Tool"]
+      "keywords": [
+        "YubiKey Personalization Tool"
+      ]
     },
     {
       "name": "Remote Desktop Connection (mstsc)",
-      "executables": ["mstsc.exe"],
+      "executables": [
+        "mstsc.exe"
+      ],
       "publisher": "Microsoft Corporation",
-      "keywords": ["mstsc", "Remote Desktop"]
+      "keywords": [
+        "mstsc",
+        "Remote Desktop"
+      ]
     },
     {
       "name": "HWiNFO",
-      "executables": ["HWiNFO64.exe", "HWiNFO32.exe"],
-      "keywords": ["HWiNFO"]
+      "executables": [
+        "HWiNFO64.exe",
+        "HWiNFO32.exe"
+      ],
+      "keywords": [
+        "HWiNFO"
+      ]
     },
     {
       "name": "MSI Afterburner",
-      "executables": ["MSIAfterburner.exe"],
-      "keywords": ["MSI Afterburner"]
+      "executables": [
+        "MSIAfterburner.exe"
+      ],
+      "keywords": [
+        "MSI Afterburner"
+      ]
     },
     {
       "name": "NZXT CAM",
-      "executables": ["CAM.exe"],
+      "executables": [
+        "CAM.exe"
+      ],
       "publisher": "NZXT",
-      "keywords": ["NZXT CAM"]
+      "keywords": [
+        "NZXT CAM"
+      ]
     },
     {
       "name": "AIDA64",
-      "executables": ["aida64.exe"],
+      "executables": [
+        "aida64.exe"
+      ],
       "publisher": "FinalWire Ltd.",
-      "keywords": ["AIDA64"]
+      "keywords": [
+        "AIDA64"
+      ]
     },
     {
       "name": "HWMonitor",
-      "executables": ["HWMonitor.exe", "HWMonitor_x64.exe"],
+      "executables": [
+        "HWMonitor.exe",
+        "HWMonitor_x64.exe"
+      ],
       "publisher": "CPUID",
-      "keywords": ["HWMonitor"]
+      "keywords": [
+        "HWMonitor"
+      ]
     },
     {
       "name": "Open Hardware Monitor",
-      "executables": ["OpenHardwareMonitor.exe"],
-      "keywords": ["Open Hardware Monitor"]
+      "executables": [
+        "OpenHardwareMonitor.exe"
+      ],
+      "keywords": [
+        "Open Hardware Monitor"
+      ]
     },
     {
       "name": "Core Temp",
-      "executables": ["CoreTemp.exe"],
-      "keywords": ["Core Temp"]
+      "executables": [
+        "CoreTemp.exe"
+      ],
+      "keywords": [
+        "Core Temp"
+      ]
     },
     {
       "name": "SpeedFan",
-      "executables": ["speedfan.exe"],
-      "keywords": ["SpeedFan"]
+      "executables": [
+        "speedfan.exe"
+      ],
+      "keywords": [
+        "SpeedFan"
+      ]
     }
   ],
   "Security Tools & Password Managers": [
     {
       "name": "Wireshark",
-      "executables": ["wireshark.exe"],
-      "keywords": ["Wireshark"]
+      "executables": [
+        "wireshark.exe"
+      ],
+      "keywords": [
+        "Wireshark"
+      ]
     },
     {
       "name": "Nmap",
-      "executables": ["nmap.exe"],
-      "keywords": ["Nmap"]
+      "executables": [
+        "nmap.exe"
+      ],
+      "keywords": [
+        "Nmap"
+      ]
     },
     {
       "name": "Process Explorer",
-      "executables": ["procexp.exe", "procexp64.exe"],
+      "executables": [
+        "procexp.exe",
+        "procexp64.exe"
+      ],
       "publisher": "Microsoft Corporation (Sysinternals)",
-      "keywords": ["Process Explorer", "Sysinternals"]
+      "keywords": [
+        "Process Explorer",
+        "Sysinternals"
+      ]
     },
     {
       "name": "Autoruns",
-      "executables": ["Autoruns.exe", "Autoruns64.exe"],
+      "executables": [
+        "Autoruns.exe",
+        "Autoruns64.exe"
+      ],
       "publisher": "Microsoft Corporation (Sysinternals)",
-      "keywords": ["Autoruns", "Sysinternals"]
+      "keywords": [
+        "Autoruns",
+        "Sysinternals"
+      ]
     },
     {
       "name": "Sysmon",
-      "executables": ["Sysmon.exe"],
+      "executables": [
+        "Sysmon.exe"
+      ],
       "publisher": "Microsoft Corporation (Sysinternals)",
       "notes": "Driver/system service",
-      "keywords": ["Sysmon", "Sysinternals"]
+      "keywords": [
+        "Sysmon",
+        "Sysinternals"
+      ]
     },
     {
       "name": "VeraCrypt",
-      "executables": ["VeraCrypt.exe"],
-      "keywords": ["VeraCrypt"]
+      "executables": [
+        "VeraCrypt.exe"
+      ],
+      "keywords": [
+        "VeraCrypt"
+      ]
     },
     {
       "name": "KeePass Password Safe",
-      "executables": ["KeePass.exe"],
+      "executables": [
+        "KeePass.exe"
+      ],
       "publisher": "Dominik Reichl",
-      "keywords": ["KeePass"]
+      "keywords": [
+        "KeePass"
+      ]
     }
   ],
   "Benchmarking Software": [
     {
       "name": "3DMark",
-      "executables": ["3DMark.exe"],
+      "executables": [
+        "3DMark.exe"
+      ],
       "publisher": "UL",
-      "keywords": ["3DMark"]
+      "keywords": [
+        "3DMark"
+      ]
     },
     {
       "name": "PCMark 10",
-      "executables": ["PCMark10.exe"],
+      "executables": [
+        "PCMark10.exe"
+      ],
       "publisher": "UL",
-      "keywords": ["PCMark"]
+      "keywords": [
+        "PCMark"
+      ]
     },
     {
       "name": "Cinebench",
-      "executables": ["Cinebench.exe"],
+      "executables": [
+        "Cinebench.exe"
+      ],
       "publisher": "Maxon",
-      "keywords": ["Cinebench"]
+      "keywords": [
+        "Cinebench"
+      ]
     },
     {
       "name": "Geekbench",
-      "executables": ["Geekbench.exe", "Geekbench5.exe", "Geekbench6.exe"],
-      "keywords": ["Geekbench"]
+      "executables": [
+        "Geekbench.exe",
+        "Geekbench5.exe",
+        "Geekbench6.exe"
+      ],
+      "keywords": [
+        "Geekbench"
+      ]
     },
     {
       "name": "UserBenchmark",
-      "executables": ["UserBenchmark.exe"],
-      "keywords": ["UserBenchmark"]
+      "executables": [
+        "UserBenchmark.exe"
+      ],
+      "keywords": [
+        "UserBenchmark"
+      ]
     },
     {
       "name": "PassMark PerformanceTest",
-      "executables": ["PerformanceTest.exe", "pt_x64.exe"],
+      "executables": [
+        "PerformanceTest.exe",
+        "pt_x64.exe"
+      ],
       "publisher": "PassMark Software",
-      "keywords": ["PassMark", "PerformanceTest"]
+      "keywords": [
+        "PassMark",
+        "PerformanceTest"
+      ]
     },
     {
       "name": "Futuremark SystemInfo",
-      "executables": ["FMSIScan.exe", "SystemInfo.exe"],
+      "executables": [
+        "FMSIScan.exe",
+        "SystemInfo.exe"
+      ],
       "publisher": "UL",
       "notes": "Component for benchmarks",
-      "keywords": ["Futuremark SystemInfo"]
+      "keywords": [
+        "Futuremark SystemInfo"
+      ]
     }
   ],
   "Niche & Specialized Software": [
@@ -1018,19 +1847,32 @@
       "items": [
         {
           "name": "R",
-          "executables": ["R.exe", "Rgui.exe"],
-          "keywords": ["R Language"]
+          "executables": [
+            "R.exe",
+            "Rgui.exe"
+          ],
+          "keywords": [
+            "R Language"
+          ]
         },
         {
           "name": "SPSS Statistics",
-          "executables": ["stats.exe"],
+          "executables": [
+            "stats.exe"
+          ],
           "publisher": "IBM",
-          "keywords": ["SPSS"]
+          "keywords": [
+            "SPSS"
+          ]
         },
         {
           "name": "JASP",
-          "executables": ["JASP.exe"],
-          "keywords": ["JASP"]
+          "executables": [
+            "JASP.exe"
+          ],
+          "keywords": [
+            "JASP"
+          ]
         }
       ]
     },
@@ -1039,10 +1881,14 @@
       "items": [
         {
           "name": "AMD Install Manager",
-          "executables": ["InstallManagerApp.exe"],
+          "executables": [
+            "InstallManagerApp.exe"
+          ],
           "publisher": "Advanced Micro Devices, Inc.",
           "notes": "Part of AMD driver package",
-          "keywords": ["AMD Install Manager"]
+          "keywords": [
+            "AMD Install Manager"
+          ]
         }
       ]
     }
@@ -1050,177 +1896,314 @@
   "Common Game Launchers": [
     {
       "name": "Steam",
-      "executables": ["Steam.exe"],
+      "executables": [
+        "Steam.exe"
+      ],
       "publisher": "Valve Corporation",
-      "keywords": ["Steam", "steamapps"]
+      "keywords": [
+        "Steam",
+        "steamapps"
+      ]
     },
     {
       "name": "Epic Games Launcher",
-      "executables": ["EpicGamesLauncher.exe"],
+      "executables": [
+        "EpicGamesLauncher.exe"
+      ],
       "publisher": "Epic Games, Inc.",
-      "keywords": ["Epic Games Launcher", "epic games"]
+      "keywords": [
+        "Epic Games Launcher",
+        "epic games"
+      ]
     },
     {
       "name": "GOG Galaxy",
-      "executables": ["GalaxyClient.exe"],
+      "executables": [
+        "GalaxyClient.exe"
+      ],
       "publisher": "GOG.com (CD Projekt)",
-      "keywords": ["GOG Galaxy", "gog galaxy"]
+      "keywords": [
+        "GOG Galaxy",
+        "gog galaxy"
+      ]
     },
     {
       "name": "Battle.net",
-      "executables": ["Battle.net Launcher.exe"],
+      "executables": [
+        "Battle.net Launcher.exe"
+      ],
       "publisher": "Blizzard Entertainment",
-      "keywords": ["Battle.net", "Blizzard Entertainment"]
+      "keywords": [
+        "Battle.net",
+        "Blizzard Entertainment"
+      ]
     },
     {
       "name": "EA App (formerly Origin)",
-      "executables": ["EADesktop.exe", "Origin.exe"],
+      "executables": [
+        "EADesktop.exe",
+        "Origin.exe"
+      ],
       "publisher": "Electronic Arts",
-      "keywords": ["EA App", "Origin", "Electronic Arts"]
+      "keywords": [
+        "EA App",
+        "Origin",
+        "Electronic Arts"
+      ]
     },
     {
       "name": "Ubisoft Connect (formerly Uplay)",
-      "executables": ["UbisoftConnect.exe", "Uplay.exe"],
+      "executables": [
+        "UbisoftConnect.exe",
+        "Uplay.exe"
+      ],
       "publisher": "Ubisoft",
-      "keywords": ["Ubisoft Connect", "Uplay", "Ubisoft Game Launcher"]
+      "keywords": [
+        "Ubisoft Connect",
+        "Uplay",
+        "Ubisoft Game Launcher"
+      ]
     },
     {
       "name": "Xbox App / Game Bar",
-      "executables": ["XboxApp.exe"],
+      "executables": [
+        "XboxApp.exe"
+      ],
       "publisher": "Microsoft Corporation",
       "notes": "and other system components",
-      "keywords": ["Xbox", "XboxGames", "GamingServices"]
+      "keywords": [
+        "Xbox",
+        "XboxGames",
+        "GamingServices"
+      ]
     },
     {
       "name": "Rockstar Games Launcher",
-      "executables": ["Launcher.exe"],
+      "executables": [
+        "Launcher.exe"
+      ],
       "publisher": "Rockstar Games",
-      "keywords": ["Rockstar Games Launcher"]
+      "keywords": [
+        "Rockstar Games Launcher"
+      ]
     },
     {
       "name": "Itch.io App",
-      "executables": ["itch.exe"],
+      "executables": [
+        "itch.exe"
+      ],
       "publisher": "Itch Corp",
-      "keywords": ["itch.io"]
+      "keywords": [
+        "itch.io"
+      ]
     }
   ],
   "Popular Games": [
     {
       "name": "Call of Duty (Series)",
-      "executables": ["cod.exe", "iw*.exe", "MWII.exe", "BlackOps*.exe"],
+      "executables": [
+        "cod.exe",
+        "iw*.exe",
+        "MWII.exe",
+        "BlackOps*.exe"
+      ],
       "publisher": "Activision",
-      "keywords": ["Call of Duty"]
+      "keywords": [
+        "Call of Duty"
+      ]
     },
     {
       "name": "The Elder Scrolls (Series)",
-      "executables": ["TESV.exe", "Oblivion.exe"],
+      "executables": [
+        "TESV.exe",
+        "Oblivion.exe"
+      ],
       "publisher": "Bethesda Softworks",
-      "keywords": ["Elder Scrolls", "Skyrim", "Oblivion"]
+      "keywords": [
+        "Elder Scrolls",
+        "Skyrim",
+        "Oblivion"
+      ]
     },
     {
       "name": "Grand Theft Auto (Series)",
-      "executables": ["GTA5.exe", "GTAIV.exe"],
+      "executables": [
+        "GTA5.exe",
+        "GTAIV.exe"
+      ],
       "publisher": "Rockstar Games",
-      "keywords": ["GTA", "Grand Theft Auto"]
+      "keywords": [
+        "GTA",
+        "Grand Theft Auto"
+      ]
     },
     {
       "name": "Borderlands (Series)",
-      "executables": ["Borderlands2.exe", "Borderlands3.exe"],
+      "executables": [
+        "Borderlands2.exe",
+        "Borderlands3.exe"
+      ],
       "publisher": "Gearbox Software, 2K Games",
-      "keywords": ["Borderlands"]
+      "keywords": [
+        "Borderlands"
+      ]
     },
     {
       "name": "Cyberpunk 2077",
-      "executables": ["Cyberpunk2077.exe"],
+      "executables": [
+        "Cyberpunk2077.exe"
+      ],
       "publisher": "CD Projekt RED",
-      "keywords": ["Cyberpunk 2077"]
+      "keywords": [
+        "Cyberpunk 2077"
+      ]
     },
     {
       "name": "The Witcher (Series)",
-      "executables": ["witcher3.exe"],
+      "executables": [
+        "witcher3.exe"
+      ],
       "publisher": "CD Projekt RED",
-      "keywords": ["The Witcher"]
+      "keywords": [
+        "The Witcher"
+      ]
     },
     {
       "name": "Fallout (Series)",
-      "executables": ["Fallout4.exe", "Fallout76.exe"],
+      "executables": [
+        "Fallout4.exe",
+        "Fallout76.exe"
+      ],
       "publisher": "Bethesda Softworks",
-      "keywords": ["Fallout"]
+      "keywords": [
+        "Fallout"
+      ]
     },
     {
       "name": "Elden Ring",
-      "executables": ["eldenring.exe"],
+      "executables": [
+        "eldenring.exe"
+      ],
       "publisher": "FromSoftware, Bandai Namco",
-      "keywords": ["Elden Ring"]
+      "keywords": [
+        "Elden Ring"
+      ]
     },
     {
       "name": "Baldur's Gate 3",
-      "executables": ["bg3.exe", "bg3_dx11.exe"],
+      "executables": [
+        "bg3.exe",
+        "bg3_dx11.exe"
+      ],
       "publisher": "Larian Studios",
-      "keywords": ["Baldur's Gate 3"]
+      "keywords": [
+        "Baldur's Gate 3"
+      ]
     },
     {
       "name": "Minecraft (Java Edition)",
-      "executables": ["javaw.exe"],
+      "executables": [
+        "javaw.exe"
+      ],
       "publisher": "Mojang Studios (Microsoft)",
       "notes": "Launched via Launcher, involves javaw.exe with specific arguments",
-      "keywords": ["Minecraft Java"]
+      "keywords": [
+        "Minecraft Java"
+      ]
     },
     {
       "name": "Minecraft (Bedrock Edition)",
-      "executables": ["Minecraft.Windows.exe"],
+      "executables": [
+        "Minecraft.Windows.exe"
+      ],
       "publisher": "Mojang Studios (Microsoft)",
       "notes": "Microsoft Store App",
-      "keywords": ["Minecraft Bedrock", "Minecraft for Windows"]
+      "keywords": [
+        "Minecraft Bedrock",
+        "Minecraft for Windows"
+      ]
     },
     {
       "name": "Fortnite",
-      "executables": ["FortniteClient-Win64-Shipping.exe"],
+      "executables": [
+        "FortniteClient-Win64-Shipping.exe"
+      ],
       "publisher": "Epic Games",
-      "keywords": ["Fortnite"]
+      "keywords": [
+        "Fortnite"
+      ]
     },
     {
       "name": "League of Legends",
-      "executables": ["LeagueClient.exe"],
+      "executables": [
+        "LeagueClient.exe"
+      ],
       "publisher": "Riot Games",
-      "keywords": ["League of Legends", "LoL"]
+      "keywords": [
+        "League of Legends",
+        "LoL"
+      ]
     },
     {
       "name": "Valorant",
-      "executables": ["VALORANT-Win64-Shipping.exe"],
+      "executables": [
+        "VALORANT-Win64-Shipping.exe"
+      ],
       "publisher": "Riot Games",
-      "keywords": ["Valorant"]
+      "keywords": [
+        "Valorant"
+      ]
     },
     {
       "name": "Apex Legends",
-      "executables": ["r5apex.exe"],
+      "executables": [
+        "r5apex.exe"
+      ],
       "publisher": "Respawn Entertainment (EA)",
-      "keywords": ["Apex Legends"]
+      "keywords": [
+        "Apex Legends"
+      ]
     },
     {
       "name": "Overwatch 2",
-      "executables": ["Overwatch.exe"],
+      "executables": [
+        "Overwatch.exe"
+      ],
       "publisher": "Blizzard Entertainment",
-      "keywords": ["Overwatch"]
+      "keywords": [
+        "Overwatch"
+      ]
     },
     {
       "name": "World of Warcraft",
-      "executables": ["Wow.exe"],
+      "executables": [
+        "Wow.exe"
+      ],
       "publisher": "Blizzard Entertainment",
-      "keywords": ["World of Warcraft", "WoW"]
+      "keywords": [
+        "World of Warcraft",
+        "WoW"
+      ]
     },
     {
       "name": "Final Fantasy XIV",
-      "executables": ["ffxiv_dx11.exe"],
+      "executables": [
+        "ffxiv_dx11.exe"
+      ],
       "publisher": "Square Enix",
-      "keywords": ["Final Fantasy XIV", "FFXIV"]
+      "keywords": [
+        "Final Fantasy XIV",
+        "FFXIV"
+      ]
     },
     {
       "name": "Avowed",
       "executables": [],
       "publisher": "Obsidian Entertainment (Microsoft)",
       "notes": "Executable name varies by launcher",
-      "keywords": ["Avowed"]
+      "keywords": [
+        "Avowed"
+      ]
     }
   ],
   "System Drivers & Background Components": [
@@ -1286,7 +2269,9 @@
     },
     {
       "name": "DiagnosticsHub_CollectionService",
-      "executables": ["DiagnosticsHub.Collection.Service.exe"],
+      "executables": [
+        "DiagnosticsHub.Collection.Service.exe"
+      ],
       "publisher": "Microsoft Corporation",
       "notes": "Background Service"
     },

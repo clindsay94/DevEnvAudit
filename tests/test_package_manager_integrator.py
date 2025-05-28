@@ -93,11 +93,11 @@ Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.aliot
 
     def test_parse_version_from_output_winget(self):
         output = """
-Name        Id               Version Matched By
---------------------------------------------------
-Python 3.11 Python.Python.3.11 3.11.4  Moniker
-Python 3.10 Python.Python.3.10 3.10.11 Moniker
-Git         Git.Git          2.40.0 Moniker
+Name        Id                 Version   Matched By
+----------------------------------------------------
+Python 3.11  Python.Python.3.11  3.11.4   Moniker
+Python 3.10  Python.Python.3.10  3.10.11  Moniker
+Git          Git.Git             2.40.0   Moniker
 """
         self.assertEqual(pmi.parse_version_from_output(output, "winget", "Python.Python.3.10"), "3.10.11")
         self.assertEqual(pmi.parse_version_from_output(output, "winget", "Git.Git"), "2.40.0")
@@ -167,7 +167,7 @@ Git         Git.Git          2.40.0 Moniker
 
         # Case 2: packaging library import fails (fallback to string comparison)
         # For this, we need to simulate the ImportError for 'packaging.version' inside the function
-        with patch('package_manager_integrator.packaging', None): # Simulate packaging module not being available
+        with patch.dict('sys.modules', {'packaging.version': None, 'packaging': None}): # Simulate packaging module not being available
             pmi.TOOL_TO_PM_PACKAGE_MAP['mytool_lexical'] = {'brew': 'mytool-lex'}
             self.mock_run_pm_command.return_value = ("mytool-lex: stable 1.2\n", "")
             result_lex = pmi.get_latest_version_and_update_command("mytool_lexical", "MyToolLex", "1.11", ["brew"]) # "1.2" > "1.11" lexicographically
